@@ -129,6 +129,14 @@ public class BossController : MonoBehaviour
         UIController.instance.bossHealthBar.value = currentHealth;
     }
 }
+[System.Serializable]
+public class BossSequence
+{
+    [Header("Sequence")]
+    public BossAction[] actions;
+
+    public int endSequenceHealth;
+}
 
 [System.Serializable]
 public class BossAction
@@ -150,11 +158,4 @@ public class BossAction
 
 }
 
-[System.Serializable]
-public class BossSequence
-{
-    [Header("Sequence")]
-    public BossAction[] actions;
 
-    public int endSequenceHealth;
-}

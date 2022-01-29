@@ -18,7 +18,9 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelMusic.volume = DataSaver.LoadData().volumePercentage;
+        gameOverMusic.volume = DataSaver.LoadData().volumePercentage;
+        winMusic.volume = DataSaver.LoadData().volumePercentage;
     }
 
     // Update is called once per frame
