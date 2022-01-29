@@ -31,7 +31,7 @@ public class Breakables : MonoBehaviour
 
         AudioManager.instance.PlaySFX(0);
 
-        //show broken pieces
+        //show broken pieces after getting destroyed.
         int piecesToDrop = Random.Range(1, maxPieces);
 
         for (int i = 0; i < piecesToDrop; i++)
