@@ -6,37 +6,31 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
+    [Header("Movement Speed")]
     public float moveSpeed;
     private Vector2 moveInput;
+    [HideInInspector]
+    public bool canMove = true;
 
-    public Rigidbody2D theRB;
-
-    public Transform gunArm;
-
-    //private Camera theCam;
-
-    public Animator anim;
-
-    /* public GameObject bulletToFire;
-    public Transform firePoint;
-
-    public float timeBetweenShots;
-    private float shotCounter; */
-
-    public SpriteRenderer bodySR;
-
+    [Header("Dash Ability")]
     private float activeMoveSpeed;
     public float dashSpeed = 8f, dashLength = .5f, dashCooldown = 1f, dashInvincibility = .5f;
     [HideInInspector]
     public float dashCounter;
     private float dashCoolCounter;
 
-    [HideInInspector]
-    public bool canMove = true;
-
+    [Header("Gun Inventory")]
     public List<Gun> availableGuns = new List<Gun>();
     [HideInInspector]
     public int currentGun;
+
+    [Header("Animation")]
+    public Animator anim;
+
+    [Header("Player Visual / Physical Properties")]
+    public SpriteRenderer bodySR;
+    public Transform gunArm;
+    public Rigidbody2D theRB;
 
     private void Awake()
     {
@@ -48,8 +42,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //theCam = Camera.main;
-
         activeMoveSpeed = moveSpeed;
 
         UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
@@ -65,8 +57,6 @@ public class PlayerController : MonoBehaviour
             moveInput.y = Input.GetAxisRaw("Vertical");
 
             moveInput.Normalize();
-
-            //transform.position += new Vector3(moveInput.x * Time.deltaTime * moveSpeed, moveInput.y * Time.deltaTime * moveSpeed, 0f);
 
             theRB.velocity = moveInput * activeMoveSpeed;
 
@@ -89,29 +79,7 @@ public class PlayerController : MonoBehaviour
             float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
             gunArm.rotation = Quaternion.Euler(0, 0, angle);
 
-
-
-            /* if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                shotCounter = timeBetweenShots;
-                AudioManager.instance.PlaySFX(12);
-
-            }
-
-            if (Input.GetMouseButton(0))
-            {
-                shotCounter -= Time.deltaTime;
-
-                if (shotCounter <= 0)
-                {
-                    Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                    AudioManager.instance.PlaySFX(12);
-
-                    shotCounter = timeBetweenShots;
-                }
-            } */
-
+            // switch guns
             if(Input.GetKeyDown(KeyCode.Tab))
             {
                 if(availableGuns.Count > 0)
@@ -130,7 +98,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-
+            // Dash Ability
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (dashCoolCounter <= 0 && dashCounter <= 0)
@@ -161,10 +129,7 @@ public class PlayerController : MonoBehaviour
                 dashCoolCounter -= Time.deltaTime;
             }
 
-
-
-
-
+            // Animating the player.
             if (moveInput != Vector2.zero)
             {
                 anim.SetBool("isMoving", true);
@@ -173,7 +138,8 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isMoving", false);
             }
-        } else
+        } 
+        else
         {
             theRB.velocity = Vector2.zero;
             anim.SetBool("isMoving", false);

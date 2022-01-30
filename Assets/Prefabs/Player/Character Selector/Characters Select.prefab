@@ -126,6 +126,7 @@ MonoBehaviour:
   message: {fileID: 3767601519154792948}
   playerToSpawn: {fileID: 6846304495334215268, guid: aca84abfc3d1572459544f837f036008,
     type: 3}
+  shouldUnlock: 0
 --- !u!61 &-8784357713862950784
 BoxCollider2D:
   m_ObjectHideFlags: 0

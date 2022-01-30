@@ -8,15 +8,19 @@ public class UIController : MonoBehaviour
 {
     public static UIController instance;
 
+    [Header("Player HP and Coins")]
     public Slider healthSlider;
     public Text healthText, coinText;
 
+    [Header("Player Death Pop-Up Window")]
     public GameObject deathScreen;
 
+    [Header("Fade Screen")]
     public Image fadeScreen;
     public float fadeSpeed;
     private bool fadeToBlack, fadeOutBlack;
 
+    [Header("Scenes To Load")]
     public string newGameScene, mainMenuScene;
 
     public GameObject pauseMenu, mapDisplay, bigMapText;
