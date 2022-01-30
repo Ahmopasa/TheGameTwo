@@ -28,8 +28,6 @@ public class EnemyController : MonoBehaviour
     public Transform[] patrolPoints;
     private int currentPatrolPoint;
 
-    
-
     [Header("Shooting")]
     public bool shouldShoot;
 
@@ -72,7 +70,8 @@ public class EnemyController : MonoBehaviour
             if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < rangeToChasePlayer && shouldChasePlayer)
             {
                 moveDirection = PlayerController.instance.transform.position - transform.position;
-            } else
+            } 
+            else
             {
                 if(shouldWander)
                 {
@@ -145,9 +144,8 @@ public class EnemyController : MonoBehaviour
                     AudioManager.instance.PlaySFX(13);
                 }
             }
-
-
-        } else
+        }
+        else
         {
             theRB.velocity = Vector2.zero;
         }
