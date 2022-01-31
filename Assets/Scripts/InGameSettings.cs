@@ -20,5 +20,4 @@ public class InGameSettings
         this.volumePercentage = inGameSettings.volumeSlider.value;
         this.volumeInfo = inGameSettings.volumeText.text;
     }
-
 }

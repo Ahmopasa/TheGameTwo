@@ -35,4 +35,36 @@ public static class DataSaver
             return null;
         }
     }
+
+    public static void SavePlayerData(CharacterTracker playerData)
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter(); // We'll use this to format our in game setting values.
+        string filePath = Application.persistentDataPath + "/playerData.settings"; // The file path where we'll create our save files.
+        FileStream fileHandler = new FileStream(filePath, FileMode.Create); // Our file handler.
+
+        PlayerData inGameSettings = new PlayerData(playerData); // We loaded our values onto the carrier class obj.
+
+        binaryFormatter.Serialize(fileHandler, inGameSettings); // We converted our data into binary data.
+        fileHandler.Close(); // End the process.
+    }
+
+    public static PlayerData LoadPlayerData()
+    {
+        string filePath = Application.persistentDataPath + "/playerData.settings";
+        if (File.Exists(filePath))
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileStream fileHandler = new FileStream(filePath, FileMode.Open);
+            PlayerData inGameSettings = binaryFormatter.Deserialize(fileHandler) as PlayerData;
+            fileHandler.Close();
+
+            return inGameSettings;
+        }
+        else
+        {
+            Debug.LogError("Save-file not found in => " + filePath);
+
+            return null;
+        }
+    }
 }

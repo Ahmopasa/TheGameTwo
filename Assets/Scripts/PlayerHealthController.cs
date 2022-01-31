@@ -12,6 +12,8 @@ public class PlayerHealthController : MonoBehaviour
     public float damageInvincLength = 1f;
     private float invincCount;
 
+    //public PlayerDataSaver playerData;
+
     private void Awake()
     {
         instance = this;
@@ -24,7 +26,6 @@ public class PlayerHealthController : MonoBehaviour
         currentHealth = CharacterTracker.instance.currentHealth;
 
         //currentHealth = maxHealth;
-
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();

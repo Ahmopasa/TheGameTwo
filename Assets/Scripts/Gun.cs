@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    [Header("Bullets")]
     public GameObject bulletToFire;
     public Transform firePoint;
 
+    [Header("Fire System")]
     public float timeBetweenShots;
     private float shotCounter;
 
+    [Header("Weapon System")]
     public string weaponName;
     public Sprite gunUI;
 
+    [Header("Shop System")]
     public int itemCost;
     public Sprite gunShopSprite;
 
@@ -33,7 +37,6 @@ public class Gun : MonoBehaviour
             }
             else
             {
-
                 if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
                 {
                     Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
@@ -41,19 +44,6 @@ public class Gun : MonoBehaviour
                     AudioManager.instance.PlaySFX(12);
 
                 }
-
-                /* if (Input.GetMouseButton(0))
-                {
-                    shotCounter -= Time.deltaTime;
-
-                    if (shotCounter <= 0)
-                    {
-                        Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                        AudioManager.instance.PlaySFX(12);
-
-                        shotCounter = timeBetweenShots;
-                    }
-                } */
             }
         }
     }

@@ -146,7 +146,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     public void SwitchGun()
     {
         foreach(Gun theGun in availableGuns)

@@ -23,13 +23,15 @@ public class UIController : MonoBehaviour
     [Header("Scenes To Load")]
     public string newGameScene, mainMenuScene;
 
+    [Header("Others")]
     public GameObject pauseMenu, mapDisplay, bigMapText;
 
+    [Header("Weapon System")]
     public Image currentGun;
     public Text gunText;
 
+    [Header("Boss System")]
     public Slider bossHealthBar;
-
 
     private void Awake()
     {
