@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         activeMoveSpeed = moveSpeed;
@@ -48,7 +47,7 @@ public class PlayerController : MonoBehaviour
         UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (canMove && !LevelManager.instance.isPaused)
