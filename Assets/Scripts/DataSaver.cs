@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public static class DataSaver
 {
+    private static readonly string SAVE_FOLDER = Application.dataPath + "/Save/";
     public static void SaveData(Settings settings)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter(); // We'll use this to format our in game setting values.
@@ -40,44 +41,36 @@ public static class DataSaver
 
     public static void SavePlayerData(CharacterDataTracker playerData)
     {
-        BinaryFormatter binaryFormatter = new BinaryFormatter(); // We'll use this to format our in game setting values.
-        string filePath = Application.persistentDataPath + "/playerData.settings"; // The file path where we'll create our save files.
-        FileStream fileHandler = new FileStream(filePath, FileMode.Create); // Our file handler.
-
-        PlayerData inGameSettings = new PlayerData(playerData); // We loaded our values onto the carrier class obj.
-
-        binaryFormatter.Serialize(fileHandler, inGameSettings); // We converted our data into binary data.
-        fileHandler.Close(); // End the process.
+        if (!Directory.Exists(SAVE_FOLDER))
+        {
+            Directory.CreateDirectory(SAVE_FOLDER);
+        }
+        string jsonString = JsonUtility.ToJson(playerData);
+        File.WriteAllText(SAVE_FOLDER + "playerData.json", jsonString);
     }
 
     public static PlayerData LoadPlayerData()
     {
-        string filePath = Application.persistentDataPath + "/playerData.settings";
-        if (File.Exists(filePath))
+        if (!Directory.Exists(SAVE_FOLDER))
         {
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileStream fileHandler = new FileStream(filePath, FileMode.Open);
-
-            PlayerData inGameSettings = binaryFormatter.Deserialize(fileHandler) as PlayerData;
-            
-            fileHandler.Close();
-
-            return inGameSettings;
+            Directory.CreateDirectory(SAVE_FOLDER);
         }
-        else
+
+        if (File.Exists(SAVE_FOLDER + "playerData.json"))
         {
-            Debug.LogError("Save-file not found in => " + filePath);
+            string jsonString = File.ReadAllText(SAVE_FOLDER + "playerData.json");
 
-            return null;
+            PlayerData m_playerData = JsonUtility.FromJson<PlayerData>(jsonString);
+            if (m_playerData == null)
+            {
+                Debug.LogError("The" + m_playerData + "is null. Returning [null].");
+                return null;
+            }
+            else
+            {
+                return m_playerData;
+            }
         }
-    }
-
-    public static void SavePlayerGuns( )
-    {
-        BinaryFormatter binaryFormatter = new BinaryFormatter(); // We'll use this to format our in game setting values.
-        string filePath = Application.persistentDataPath + "/playerGunData.settings"; // The file path where we'll create our save files.
-        FileStream fileHandler = new FileStream(filePath, FileMode.Create); // Our file handler.
-
-
+        return null;
     }
 }

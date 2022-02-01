@@ -12,7 +12,6 @@ public class CharacterSelector : MonoBehaviour
 
     public bool shouldUnlock;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (shouldUnlock)
@@ -35,7 +34,6 @@ public class CharacterSelector : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(canSelect)

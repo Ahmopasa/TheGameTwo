@@ -6,8 +6,6 @@ public class CharacterDataTracker : MonoBehaviour
 {
     public static CharacterDataTracker instance;
 
-    public GameObject saveAnnouncer;
-
     [HideInInspector]
     public int currentHealth, maxHealth, currentCoins;
 
@@ -38,12 +36,12 @@ public class CharacterDataTracker : MonoBehaviour
     public void LoadPlayerData()
     {
         // Load back the values.
-        PlayerData playerData = DataSaver.LoadPlayerData();
-        if (playerData != null)
+        var loadedObj = DataSaver.LoadPlayerData();
+        if (loadedObj != null)
         {
-            this.currentHealth = playerData.currentHealthAmount;
-            this.maxHealth = playerData.maxHealthAmount;
-            this.currentCoins = playerData.currentCoinsAmount;
+            this.currentHealth = loadedObj.currentHealth;
+            this.maxHealth = loadedObj.maxHealth;
+            this.currentCoins = loadedObj.currentCoins;
         }
         else
         {
@@ -57,13 +55,8 @@ public class CharacterDataTracker : MonoBehaviour
         if (otherObj.CompareTag("Player"))
         {
             SavePlayerData();
-
-            saveAnnouncer.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D otherObj)
-    {
-        saveAnnouncer.SetActive(false);
-    }
+
 }

@@ -6,12 +6,7 @@ using UnityEngine;
 public class PlayerData
 {
     // Player Data
-    public int currentHealthAmount = 3, maxHealthAmount = 3, currentCoinsAmount = 1;
-
-    public PlayerData(CharacterDataTracker inGamePlayerData)
-    {
-        this.currentHealthAmount = inGamePlayerData.currentHealth;
-        this.maxHealthAmount = inGamePlayerData.maxHealth;
-        this.currentCoinsAmount = inGamePlayerData.currentCoins;
-    }
+    public int currentHealth = 3;
+    public int maxHealth = 3;
+    public int currentCoins = 1;
 }
