@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections;
+using System.Collections.Generic;
 
 public static class DataSaver
 {
@@ -36,7 +38,7 @@ public static class DataSaver
         }
     }
 
-    public static void SavePlayerData(CharacterTracker playerData)
+    public static void SavePlayerData(CharacterDataTracker playerData)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter(); // We'll use this to format our in game setting values.
         string filePath = Application.persistentDataPath + "/playerData.settings"; // The file path where we'll create our save files.
@@ -55,7 +57,9 @@ public static class DataSaver
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             FileStream fileHandler = new FileStream(filePath, FileMode.Open);
+
             PlayerData inGameSettings = binaryFormatter.Deserialize(fileHandler) as PlayerData;
+            
             fileHandler.Close();
 
             return inGameSettings;
@@ -66,5 +70,14 @@ public static class DataSaver
 
             return null;
         }
+    }
+
+    public static void SavePlayerGuns( )
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter(); // We'll use this to format our in game setting values.
+        string filePath = Application.persistentDataPath + "/playerGunData.settings"; // The file path where we'll create our save files.
+        FileStream fileHandler = new FileStream(filePath, FileMode.Create); // Our file handler.
+
+
     }
 }

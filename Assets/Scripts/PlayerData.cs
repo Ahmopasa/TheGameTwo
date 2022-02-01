@@ -8,7 +8,7 @@ public class PlayerData
     // Player Data
     public int currentHealthAmount = 3, maxHealthAmount = 3, currentCoinsAmount = 1;
 
-    public PlayerData(CharacterTracker inGamePlayerData)
+    public PlayerData(CharacterDataTracker inGamePlayerData)
     {
         this.currentHealthAmount = inGamePlayerData.currentHealth;
         this.maxHealthAmount = inGamePlayerData.maxHealth;

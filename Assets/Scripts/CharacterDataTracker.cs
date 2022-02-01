@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterTracker : MonoBehaviour
+public class CharacterDataTracker : MonoBehaviour
 {
-    public static CharacterTracker instance;
+    public static CharacterDataTracker instance;
 
+    public GameObject saveAnnouncer;
+
+    [HideInInspector]
     public int currentHealth, maxHealth, currentCoins;
 
     private void Awake()
@@ -16,6 +19,11 @@ public class CharacterTracker : MonoBehaviour
     }
 
     void Update()
+    {
+        updatePlayerStats();
+    }
+
+    private void updatePlayerStats()
     {
         currentHealth = PlayerHealthController.instance.currentHealth;
         maxHealth = PlayerHealthController.instance.maxHealth;
@@ -46,9 +54,16 @@ public class CharacterTracker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otherObj)
     {
-        if (otherObj.tag == "Player")
+        if (otherObj.CompareTag("Player"))
         {
             SavePlayerData();
+
+            saveAnnouncer.SetActive(true);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D otherObj)
+    {
+        saveAnnouncer.SetActive(false);
     }
 }

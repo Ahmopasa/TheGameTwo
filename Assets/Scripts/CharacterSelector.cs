@@ -42,20 +42,20 @@ public class CharacterSelector : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Vector3 playerPos = PlayerController.instance.transform.position;
+                Vector3 playerPos = PlayerController.instance.transform.position; // Save the current player position.
 
-                Destroy(PlayerController.instance.gameObject);
+                Destroy(PlayerController.instance.gameObject); // Destroy the current player.
 
-                PlayerController newPlayer = Instantiate(playerToSpawn, playerPos, playerToSpawn.transform.rotation);
-                PlayerController.instance = newPlayer;
+                PlayerController newPlayer = Instantiate(playerToSpawn, playerPos, playerToSpawn.transform.rotation); // Creates a new player.
+                PlayerController.instance = newPlayer; // Newly created player is the player.
 
                 gameObject.SetActive(false);
 
                 CameraController.instance.target = newPlayer.transform;
 
                 CharacterSelectManager.instance.activePlayer = newPlayer;
-                CharacterSelectManager.instance.activeCharSelect.gameObject.SetActive(true);
                 CharacterSelectManager.instance.activeCharSelect = this;
+                CharacterSelectManager.instance.activeCharSelect.gameObject.SetActive(true);
             }
         }
     }

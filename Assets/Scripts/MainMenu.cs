@@ -18,9 +18,11 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("InGameSong").gameObject.GetComponent<AudioSource>().mute = DataSaver.LoadData().muteStatus;
-        GameObject.Find("InGameSong").gameObject.GetComponent<AudioSource>().volume = DataSaver.LoadData().volumePercentage;
-        GameObject.Find("InGameSong").gameObject.GetComponent<AudioSource>().loop = DataSaver.LoadData().loopStatus;
+        GameObject.Find("InGameSong").GetComponent<AudioSource>().mute = DataSaver.LoadData().muteStatus;
+        GameObject.Find("InGameSong").GetComponent<AudioSource>().volume = DataSaver.LoadData().volumePercentage;
+        GameObject.Find("InGameSong").GetComponent<AudioSource>().loop = DataSaver.LoadData().loopStatus;
+
+        
     }
 
     // Update is called once per frame

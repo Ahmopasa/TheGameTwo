@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Gun : MonoBehaviour
 {
+    public static Gun instance;
+
     [Header("Bullets")]
     public GameObject bulletToFire;
     public Transform firePoint;
@@ -19,6 +22,11 @@ public class Gun : MonoBehaviour
     [Header("Shop System")]
     public int itemCost;
     public Sprite gunShopSprite;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +50,6 @@ public class Gun : MonoBehaviour
                     Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
                     shotCounter = timeBetweenShots;
                     AudioManager.instance.PlaySFX(12);
-
                 }
             }
         }

@@ -66,9 +66,9 @@ public class Settings : MonoBehaviour
             autoSaveCounter = autoSaveTimer;
         }
 
-        GameObject.Find("InGameSong").gameObject.GetComponent<AudioSource>().volume = DataSaver.LoadData().volumePercentage;
-        GameObject.Find("InGameSong").gameObject.GetComponent<AudioSource>().mute = DataSaver.LoadData().muteStatus;
-        GameObject.Find("InGameSong").gameObject.GetComponent<AudioSource>().loop = DataSaver.LoadData().loopStatus;
+        GameObject.Find("InGameSong").GetComponent<AudioSource>().volume = DataSaver.LoadData().volumePercentage;
+        GameObject.Find("InGameSong").GetComponent<AudioSource>().mute = DataSaver.LoadData().muteStatus;
+        GameObject.Find("InGameSong").GetComponent<AudioSource>().loop = DataSaver.LoadData().loopStatus;
     }
 
     public void BackToMainMenu()
