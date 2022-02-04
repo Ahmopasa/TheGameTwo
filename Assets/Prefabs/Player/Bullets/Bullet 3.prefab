@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2694096419384989723}
   - component: {fileID: 2694096419384989722}
   m_Layer: 9
-  m_Name: Player Bullet 2
+  m_Name: Bullet 3
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,8 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: -312610013
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2363109045813806874, guid: 56faa61c0738e9b43b0b5aa082c87bb1,
-    type: 3}
+  m_Sprite: {fileID: 155058217628456223, guid: 56faa61c0738e9b43b0b5aa082c87bb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,11 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec48653b0040e24bb854f817b20aff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 8.5
   theRB: {fileID: 2694096419384989722}
   impactEffect: {fileID: 527154294331547227, guid: db71af9a5c78faa47a17a62a046a55a6,
     type: 3}
-  damageToGive: 30
+  damageToGive: 65
 --- !u!61 &2694096419384989723
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -689,9 +689,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14536cda49c80a948a1e47bb5b6c7202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 10
-  maxHealth: 10
-  currentCoins: 0
+  saveAnnouncer: {fileID: 815881342}
+  playerData:
+    currentHealth: 3
+    maxHealth: 3
+    currentCoins: 1
 --- !u!4 &588294969
 Transform:
   m_ObjectHideFlags: 0
@@ -50334,6 +50336,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wooden Uzi
+      objectReference: {fileID: 0}
+    - target: {fileID: 806804682122037327, guid: 738f972b7780175408e77a7b787c9225,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 806804682122037325, guid: 738f972b7780175408e77a7b787c9225,
         type: 3}

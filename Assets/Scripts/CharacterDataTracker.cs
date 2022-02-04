@@ -6,8 +6,9 @@ public class CharacterDataTracker : MonoBehaviour
 {
     public static CharacterDataTracker instance;
 
-    [HideInInspector]
-    public int currentHealth, maxHealth, currentCoins;
+    public GameObject saveAnnouncer;
+
+    public PlayerData playerData;
 
     private void Awake()
     {
@@ -18,35 +19,34 @@ public class CharacterDataTracker : MonoBehaviour
 
     void Update()
     {
-        updatePlayerStats();
+        UpdatePlayerStats();
     }
 
-    private void updatePlayerStats()
+    private void UpdatePlayerStats()
     {
-        currentHealth = PlayerHealthController.instance.currentHealth;
-        maxHealth = PlayerHealthController.instance.maxHealth;
-        currentCoins = LevelManager.instance.currentCoins;
+        playerData.currentHealth = PlayerHealthController.instance.currentHealth;
+        playerData.maxHealth = PlayerHealthController.instance.maxHealth;
+        playerData.currentCoins = LevelManager.instance.currentCoins;
     }
 
     public void SavePlayerData()
     {
-        DataSaver.SavePlayerData(this);
+        DataSaver.SavePlayerData(this.playerData);
     }
 
     public void LoadPlayerData()
     {
         // Load back the values.
-        var loadedObj = DataSaver.LoadPlayerData();
-        if (loadedObj != null)
+        playerData = DataSaver.LoadPlayerData();
+        if (playerData != null)
         {
-            this.currentHealth = loadedObj.currentHealth;
-            this.maxHealth = loadedObj.maxHealth;
-            this.currentCoins = loadedObj.currentCoins;
+            PlayerHealthController.instance.currentHealth = playerData.currentHealth;
+            PlayerHealthController.instance.maxHealth = playerData.maxHealth;
+            LevelManager.instance.currentCoins = playerData.currentCoins;
         }
         else
         {
             SavePlayerData();
-            LoadPlayerData();
         }
     }
 
@@ -55,8 +55,25 @@ public class CharacterDataTracker : MonoBehaviour
         if (otherObj.CompareTag("Player"))
         {
             SavePlayerData();
+
+            saveAnnouncer.SetActive(true);
         }
     }
 
+    private void OnTriggerExit2D(Collider2D otherObj)
+    {
+        if (otherObj.CompareTag("Player"))
+        {
+            saveAnnouncer.SetActive(false);
+        }
+    }
+}
 
+[System.Serializable]
+public class PlayerData
+{
+    // Player Data
+    public int currentHealth = 3;
+    public int maxHealth = 3;
+    public int currentCoins = 1;
 }

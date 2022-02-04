@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1725839546986391841}
   - component: {fileID: 1725839546986391843}
   m_Layer: 8
-  m_Name: Pistol
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,10 +99,10 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 1725839548322163760}
   timeBetweenShots: 0.75
-  weaponName: Pistol
-  gunUI: {fileID: 262978286505467586, guid: f72804754a2106a4884d758772ef2a02, type: 3}
+  weaponName: Mini Gun
+  gunUI: {fileID: 1547619706621703405, guid: f72804754a2106a4884d758772ef2a02, type: 3}
   itemCost: 25
-  gunShopSprite: {fileID: 6407226241554960098, guid: 48d85d1ef51430e42b6aef57f02c863d,
+  gunShopSprite: {fileID: -5081397497249240502, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
 --- !u!1 &1725839547296088960
 GameObject:
@@ -428,20 +428,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  theRB: {fileID: 1725839548619990434}
-  gunArm: {fileID: 1725839548833830373}
+  moveSpeed: 10
+  canMove: 1
+  dashSpeed: 16
+  dashLength: 1
+  dashCooldown: 0.75
+  dashInvincibility: 0.75
+  dashCounter: 0
+  availableGuns:
+  - {fileID: 5237068964436165975, guid: 9e68fd4e74d042946830c0c0ef97c59e, type: 3}
+  currentGun: 0
   anim: {fileID: 1725839548619990435}
   bodySR: {fileID: 1725839547296088975}
-  dashSpeed: 8
-  dashLength: 0.5
-  dashCooldown: 1
-  dashInvincibility: 0.5
-  dashCounter: 0
-  canMove: 1
-  availableGuns:
-  - {fileID: 1725839546986391843}
-  currentGun: 0
+  gunArm: {fileID: 1725839548833830373}
+  theRB: {fileID: 1725839548619990434}
 --- !u!58 &1725839548619990433
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -649,7 +649,7 @@ SpriteRenderer:
   m_SortingLayerID: 59874395
   m_SortingLayer: 6
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4254059877319897387, guid: 48d85d1ef51430e42b6aef57f02c863d,
+  m_Sprite: {fileID: -7292374845137529908, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

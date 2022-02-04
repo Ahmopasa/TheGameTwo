@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.transform.position = startPoint.position;
         PlayerController.instance.canMove = true;
 
-        currentCoins = CharacterDataTracker.instance.currentCoins;
+        currentCoins = CharacterDataTracker.instance.playerData.currentCoins;
 
         Time.timeScale = 1f;
 
@@ -54,9 +54,9 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(waitToLoad);
 
-        CharacterDataTracker.instance.currentCoins = currentCoins;
-        CharacterDataTracker.instance.currentHealth = PlayerHealthController.instance.currentHealth;
-        CharacterDataTracker.instance.maxHealth = PlayerHealthController.instance.maxHealth;
+        CharacterDataTracker.instance.playerData.currentCoins = currentCoins;
+        CharacterDataTracker.instance.playerData.currentHealth = PlayerHealthController.instance.currentHealth;
+        CharacterDataTracker.instance.playerData.maxHealth = PlayerHealthController.instance.maxHealth;
 
         SceneManager.LoadScene(nextLevel);
     }

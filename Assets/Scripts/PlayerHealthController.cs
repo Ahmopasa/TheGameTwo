@@ -22,8 +22,8 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = CharacterDataTracker.instance.maxHealth;
-        currentHealth = CharacterDataTracker.instance.currentHealth;
+        maxHealth = CharacterDataTracker.instance.playerData.maxHealth;
+        currentHealth = CharacterDataTracker.instance.playerData.currentHealth;
 
         //currentHealth = maxHealth;
         UIController.instance.healthSlider.maxValue = maxHealth;
@@ -51,6 +51,7 @@ public class PlayerHealthController : MonoBehaviour
         if (invincCount <= 0)
         {
             AudioManager.instance.PlaySFX(11);
+
             currentHealth--;
 
             invincCount = damageInvincLength;
