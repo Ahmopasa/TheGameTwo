@@ -694,6 +694,8 @@ MonoBehaviour:
     currentHealth: 3
     maxHealth: 3
     currentCoins: 1
+    playerPosition: {x: 0, y: 0, z: 0}
+    myGuns: []
 --- !u!4 &588294969
 Transform:
   m_ObjectHideFlags: 0
@@ -48330,7 +48332,7 @@ PrefabInstance:
     - target: {fileID: 4657866952632965641, guid: eec30a34986bd804ba2a60e1d9142521,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.83
+      value: 7.44
       objectReference: {fileID: 0}
     - target: {fileID: 4657866952632965641, guid: eec30a34986bd804ba2a60e1d9142521,
         type: 3}
@@ -51884,6 +51886,14 @@ PrefabInstance:
         type: 3}
       propertyPath: maxHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146864434, guid: 88a2230be5c593e459da007bdcb7f56b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146864434, guid: 88a2230be5c593e459da007bdcb7f56b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a2230be5c593e459da007bdcb7f56b, type: 3}

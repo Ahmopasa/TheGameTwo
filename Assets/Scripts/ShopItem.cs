@@ -63,11 +63,10 @@ public class ShopItem : MonoBehaviour
                         gunClone.transform.localRotation = Quaternion.Euler(Vector3.zero);
                         gunClone.transform.localScale = Vector3.one;
 
-                        PlayerController.instance.availableGuns.Add(gunClone);
+                        PlayerController.instance.availableGuns.Add(gunClone); 
                         PlayerController.instance.currentGun = PlayerController.instance.availableGuns.Count - 1;
                         PlayerController.instance.SwitchGun();
                     }
-
 
                     gameObject.SetActive(false);
                     inBuyZone = false;

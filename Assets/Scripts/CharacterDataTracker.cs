@@ -27,6 +27,8 @@ public class CharacterDataTracker : MonoBehaviour
         playerData.currentHealth = PlayerHealthController.instance.currentHealth;
         playerData.maxHealth = PlayerHealthController.instance.maxHealth;
         playerData.currentCoins = LevelManager.instance.currentCoins;
+
+        playerData.playerPosition = PlayerController.instance.transform.position;
     }
 
     public void SavePlayerData()
@@ -43,6 +45,7 @@ public class CharacterDataTracker : MonoBehaviour
             PlayerHealthController.instance.currentHealth = playerData.currentHealth;
             PlayerHealthController.instance.maxHealth = playerData.maxHealth;
             LevelManager.instance.currentCoins = playerData.currentCoins;
+            LevelManager.instance.startPoint.position = playerData.playerPosition;
         }
         else
         {
@@ -76,4 +79,6 @@ public class PlayerData
     public int currentHealth = 3;
     public int maxHealth = 3;
     public int currentCoins = 1;
+
+    public Vector3 playerPosition;
 }
