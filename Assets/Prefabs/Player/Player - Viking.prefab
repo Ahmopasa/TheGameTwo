@@ -303,7 +303,7 @@ MonoBehaviour:
   dashInvincibility: 0.5
   dashCounter: 0
   availableGuns:
-  - {fileID: 5237068964436165975, guid: 9e68fd4e74d042946830c0c0ef97c59e, type: 3}
+  - {fileID: 865610800547729348}
   currentGun: 0
   anim: {fileID: 865610800035324517}
   bodySR: {fileID: 865610799749139622}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 865610800547729346}
   - component: {fileID: 865610800547729348}
   m_Layer: 8
-  m_Name: Weapon
+  m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +436,7 @@ SpriteRenderer:
   m_SortingLayerID: 59874395
   m_SortingLayer: 6
   m_SortingOrder: 2
-  m_Sprite: {fileID: -7292374845137529908, guid: 48d85d1ef51430e42b6aef57f02c863d,
+  m_Sprite: {fileID: -7900295659209866551, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   timeBetweenShots: 0.3
   shotCounter: 0
   weaponName: Mini Gun
-  gunUI: {fileID: 1547619706621703405, guid: f72804754a2106a4884d758772ef2a02, type: 3}
+  gunUI: {fileID: -2480382951315576201, guid: f72804754a2106a4884d758772ef2a02, type: 3}
   itemCost: 25
   gunShopSprite: {fileID: 6407226241554960098, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}

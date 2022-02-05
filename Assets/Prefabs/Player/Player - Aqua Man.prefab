@@ -437,7 +437,7 @@ MonoBehaviour:
   dashInvincibility: 0.25
   dashCounter: 0
   availableGuns:
-  - {fileID: 5237068964436165975, guid: 9e68fd4e74d042946830c0c0ef97c59e, type: 3}
+  - {fileID: 1725839546986391843}
   currentGun: 0
   anim: {fileID: 1725839548619990435}
   bodySR: {fileID: 1725839547296088975}

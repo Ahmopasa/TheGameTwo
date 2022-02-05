@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3680702628865151358}
   - component: {fileID: 3680702628865151352}
   m_Layer: 8
-  m_Name: Weapon
+  m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
   dashInvincibility: 0.5
   dashCounter: 0
   availableGuns:
-  - {fileID: 1053115628602104800, guid: 362423dde9d00e94590a9cc85d03f3b3, type: 3}
+  - {fileID: 3680702628865151352}
   currentGun: 0
   anim: {fileID: 3680702629682580211}
   bodySR: {fileID: 3680702629074468637}

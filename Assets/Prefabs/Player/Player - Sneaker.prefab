@@ -214,20 +214,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  canMove: 1
+  moveSpeed: 5
+  theRB: {fileID: 4657866952632965686}
+  gunArm: {fileID: 4657866952445553543}
+  anim: {fileID: 4657866952632965685}
+  bodySR: {fileID: 4657866953238821190}
   dashSpeed: 8
   dashLength: 0.5
   dashCooldown: 1
   dashInvincibility: 0.5
   dashCounter: 0
+  canMove: 1
   availableGuns:
   - {fileID: 5870444361672573517}
   currentGun: 0
-  anim: {fileID: 4657866952632965685}
-  bodySR: {fileID: 4657866953238821190}
-  gunArm: {fileID: 4657866952445553543}
-  theRB: {fileID: 4657866952632965686}
 --- !u!58 &4657866952632965687
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ PrefabInstance:
     - target: {fileID: 7215396523932315458, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}
       propertyPath: m_Name
-      value: Weapon
+      value: Pistol
       objectReference: {fileID: 0}
     - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}

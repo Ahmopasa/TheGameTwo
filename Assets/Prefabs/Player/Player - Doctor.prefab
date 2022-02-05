@@ -140,7 +140,7 @@ MonoBehaviour:
   dashInvincibility: 0.8
   dashCounter: 0
   availableGuns:
-  - {fileID: 6221132928113712007, guid: 1a673a3af5d16424cbecf8454503a494, type: 3}
+  - {fileID: 183853888747208792}
   currentGun: 0
   anim: {fileID: 183853888050611108}
   bodySR: {fileID: 183853888776401479}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 183853888747208790}
   - component: {fileID: 183853888747208792}
   m_Layer: 8
-  m_Name: Weapon
+  m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

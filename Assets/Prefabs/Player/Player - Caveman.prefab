@@ -465,7 +465,7 @@ MonoBehaviour:
   dashInvincibility: 0.45
   dashCounter: 0
   availableGuns:
-  - {fileID: 7944749044075489126, guid: 22cae6ec32fa03d418bef878cabc0723, type: 3}
+  - {fileID: 5355918192399694629}
   currentGun: 0
   anim: {fileID: 6595548471950926685}
   bodySR: {fileID: 6595548470414524462}
@@ -534,28 +534,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6595548471199339247}
     m_Modifications:
-    - target: {fileID: 7215396523932315458, guid: b52c30ff84f2b984088f67cb865c48cb,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
-        type: 3}
-      propertyPath: bulletToFire
-      value: 
-      objectReference: {fileID: 9070735391092049552, guid: ae2ea5a1c77ff524cabc81c7848498f5,
-        type: 3}
-    - target: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
-        type: 3}
-      propertyPath: weaponName
-      value: Rifle
-      objectReference: {fileID: 0}
-    - target: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
-        type: 3}
-      propertyPath: gunUI
-      value: 
-      objectReference: {fileID: 141494655013890540, guid: f72804754a2106a4884d758772ef2a02,
-        type: 3}
     - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -611,6 +589,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7215396523932315458, guid: b52c30ff84f2b984088f67cb865c48cb,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
+        type: 3}
+      propertyPath: weaponName
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
+        type: 3}
+      propertyPath: gunUI
+      value: 
+      objectReference: {fileID: 141494655013890540, guid: f72804754a2106a4884d758772ef2a02,
+        type: 3}
+    - target: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
+        type: 3}
+      propertyPath: bulletToFire
+      value: 
+      objectReference: {fileID: 9070735391092049552, guid: ae2ea5a1c77ff524cabc81c7848498f5,
+        type: 3}
     - target: {fileID: 7308241800704614606, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}
       propertyPath: m_Sprite
@@ -625,3 +625,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1593378184374503119}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5355918192399694629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6649804802529623530, guid: b52c30ff84f2b984088f67cb865c48cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1593378184374503119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

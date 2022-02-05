@@ -302,7 +302,7 @@ MonoBehaviour:
   dashInvincibility: 0.25
   dashCounter: 0
   availableGuns:
-  - {fileID: 6221132928113712007, guid: 1a673a3af5d16424cbecf8454503a494, type: 3}
+  - {fileID: 6159625823068005540}
   currentGun: 0
   anim: {fileID: 6846304495334215257}
   bodySR: {fileID: 6846304494735781162}
@@ -534,33 +534,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6846304496092069867}
     m_Modifications:
-    - target: {fileID: 2823181517626305386, guid: 2bb150c26b973484c8aa91c5bc466a01,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
-        type: 3}
-      propertyPath: timeBetweenShots
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
-        type: 3}
-      propertyPath: bulletToFire
-      value: 
-      objectReference: {fileID: 2694096419384989725, guid: 30fa25a15f9b1954e9cf792162982e5c,
-        type: 3}
-    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
-        type: 3}
-      propertyPath: weaponName
-      value: Uzi
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
-        type: 3}
-      propertyPath: gunUI
-      value: 
-      objectReference: {fileID: 1547619706621703405, guid: f72804754a2106a4884d758772ef2a02,
-        type: 3}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -616,6 +589,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2823181517626305386, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: m_Name
+      value: Machine Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: weaponName
+      value: Uzi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: gunUI
+      value: 
+      objectReference: {fileID: 1547619706621703405, guid: f72804754a2106a4884d758772ef2a02,
+        type: 3}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: bulletToFire
+      value: 
+      objectReference: {fileID: 2694096419384989725, guid: 30fa25a15f9b1954e9cf792162982e5c,
+        type: 3}
     - target: {fileID: 2766300317315917030, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_Sprite
@@ -630,3 +630,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5349275218982395238}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6159625823068005540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+    type: 3}
+  m_PrefabInstance: {fileID: 5349275218982395238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
