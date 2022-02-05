@@ -695,7 +695,6 @@ MonoBehaviour:
     maxHealth: 3
     currentCoins: 1
     playerPosition: {x: 0, y: 0, z: 0}
-    listOfGuns: []
 --- !u!4 &588294969
 Transform:
   m_ObjectHideFlags: 0

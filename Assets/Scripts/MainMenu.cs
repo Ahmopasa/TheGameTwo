@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     [Header("Scenes to load")]
     public string levelToLoad;
     public string settingScene;
+    public string practiceTheGame;
 
     [Header("Panels to pop-up")]
     public GameObject deletePanel;
@@ -36,6 +37,11 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(levelToLoad);
+    }
+
+    public void PracticeTheGame()
+    {
+        SceneManager.LoadScene(practiceTheGame);
     }
 
     // Exits the game
