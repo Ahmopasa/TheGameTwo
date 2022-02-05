@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
 
     [Header("Fire System")]
     public float timeBetweenShots;
-    private float shotCounter;
+    public float shotCounter;
 
     [Header("Weapon System")]
     public string weaponName;

@@ -695,7 +695,7 @@ MonoBehaviour:
     maxHealth: 3
     currentCoins: 1
     playerPosition: {x: 0, y: 0, z: 0}
-    myGuns: []
+    listOfGuns: []
 --- !u!4 &588294969
 Transform:
   m_ObjectHideFlags: 0
@@ -48378,6 +48378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657866952445553560, guid: eec30a34986bd804ba2a60e1d9142521,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec30a34986bd804ba2a60e1d9142521, type: 3}

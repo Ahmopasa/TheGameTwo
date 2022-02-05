@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private float dashCoolCounter;
 
     [Header("Gun Inventory")]
-    public List<Gun> availableGuns = new List<Gun>();
+    public List<Gun> availableGuns = new List<Gun>(7);
     [HideInInspector]
     public int currentGun;
 
