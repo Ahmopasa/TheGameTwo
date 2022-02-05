@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3680702628865151358}
   - component: {fileID: 3680702628865151352}
   m_Layer: 8
-  m_Name: Pistol
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_SortingLayerID: 59874395
   m_SortingLayer: 6
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4254059877319897387, guid: 48d85d1ef51430e42b6aef57f02c863d,
+  m_Sprite: {fileID: -4583253144846247162, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -176,12 +176,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletToFire: {fileID: 4189913780510908286, guid: aea44e738a6d53d428ed536f7372350f,
+  bulletToFire: {fileID: 2694096419384989725, guid: 831a915c10c0e70448391fd3737074f4,
     type: 3}
   firePoint: {fileID: 3680702629230303534}
-  timeBetweenShots: 0.75
-  weaponName: Pistol
-  gunUI: {fileID: 262978286505467586, guid: f72804754a2106a4884d758772ef2a02, type: 3}
+  timeBetweenShots: 0.5
+  shotCounter: 0
+  weaponName: Revolver
+  gunUI: {fileID: -3940896912681915257, guid: f72804754a2106a4884d758772ef2a02, type: 3}
   itemCost: 25
   gunShopSprite: {fileID: 6407226241554960098, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
@@ -510,20 +511,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  theRB: {fileID: 3680702629682580210}
-  gunArm: {fileID: 3680702628990097336}
-  anim: {fileID: 3680702629682580211}
-  bodySR: {fileID: 3680702629074468637}
-  dashSpeed: 8
-  dashLength: 0.5
+  moveSpeed: 5.5
+  canMove: 1
+  dashSpeed: 5.25
+  dashLength: 4
   dashCooldown: 1
   dashInvincibility: 0.5
   dashCounter: 0
-  canMove: 1
   availableGuns:
-  - {fileID: 3680702628865151352}
+  - {fileID: 1053115628602104800, guid: 362423dde9d00e94590a9cc85d03f3b3, type: 3}
   currentGun: 0
+  anim: {fileID: 3680702629682580211}
+  bodySR: {fileID: 3680702629074468637}
+  gunArm: {fileID: 3680702628990097336}
+  theRB: {fileID: 3680702629682580210}
 --- !u!58 &3680702629682580209
 CircleCollider2D:
   m_ObjectHideFlags: 0

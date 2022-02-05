@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4219653719625679292}
   - component: {fileID: 4219653719625679294}
   m_Layer: 8
-  m_Name: Pistol
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 4219653719895606801}
   timeBetweenShots: 0.75
+  shotCounter: 0
   weaponName: Pistol
   gunUI: {fileID: 262978286505467586, guid: f72804754a2106a4884d758772ef2a02, type: 3}
   itemCost: 25
@@ -266,20 +267,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  theRB: {fileID: 4219653720755574747}
-  gunArm: {fileID: 4219653721376134408}
-  anim: {fileID: 4219653720755574740}
-  bodySR: {fileID: 4219653721498263398}
-  dashSpeed: 8
-  dashLength: 0.5
-  dashCooldown: 1
-  dashInvincibility: 0.5
-  dashCounter: 0
+  moveSpeed: 4
   canMove: 1
+  dashSpeed: 5
+  dashLength: 0.75
+  dashCooldown: 1.25
+  dashInvincibility: 0.45
+  dashCounter: 0
   availableGuns:
   - {fileID: 4219653719625679294}
   currentGun: 0
+  anim: {fileID: 4219653720755574740}
+  bodySR: {fileID: 4219653721498263398}
+  gunArm: {fileID: 4219653721376134408}
+  theRB: {fileID: 4219653720755574747}
 --- !u!58 &4219653720755574746
 CircleCollider2D:
   m_ObjectHideFlags: 0

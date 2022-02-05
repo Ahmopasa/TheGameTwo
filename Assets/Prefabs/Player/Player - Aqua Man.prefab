@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 59874395
   m_SortingLayer: 6
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4254059877319897387, guid: 48d85d1ef51430e42b6aef57f02c863d,
+  m_Sprite: {fileID: -7900295659209866551, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletToFire: {fileID: 4189913780510908286, guid: aea44e738a6d53d428ed536f7372350f,
+  bulletToFire: {fileID: 2694096419384989725, guid: cf9e6895ad8ac664898e7bec6e14d773,
     type: 3}
   firePoint: {fileID: 1725839548322163760}
-  timeBetweenShots: 0.75
+  timeBetweenShots: 0.3
+  shotCounter: 0
   weaponName: Mini Gun
-  gunUI: {fileID: 1547619706621703405, guid: f72804754a2106a4884d758772ef2a02, type: 3}
+  gunUI: {fileID: -2480382951315576201, guid: f72804754a2106a4884d758772ef2a02, type: 3}
   itemCost: 25
   gunShopSprite: {fileID: -5081397497249240502, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
@@ -428,12 +429,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 7.5
   canMove: 1
-  dashSpeed: 16
-  dashLength: 1
-  dashCooldown: 0.75
-  dashInvincibility: 0.75
+  dashSpeed: 10
+  dashLength: 6
+  dashCooldown: 0.3
+  dashInvincibility: 0.25
   dashCounter: 0
   availableGuns:
   - {fileID: 5237068964436165975, guid: 9e68fd4e74d042946830c0c0ef97c59e, type: 3}

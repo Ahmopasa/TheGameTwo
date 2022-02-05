@@ -294,20 +294,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  theRB: {fileID: 6846304495334215258}
-  gunArm: {fileID: 6846304496092069867}
+  moveSpeed: 7
+  canMove: 1
+  dashSpeed: 10
+  dashLength: 0.25
+  dashCooldown: 0.5
+  dashInvincibility: 0.25
+  dashCounter: 0
+  availableGuns:
+  - {fileID: 6221132928113712007, guid: 1a673a3af5d16424cbecf8454503a494, type: 3}
+  currentGun: 0
   anim: {fileID: 6846304495334215257}
   bodySR: {fileID: 6846304494735781162}
-  dashSpeed: 8
-  dashLength: 0.5
-  dashCooldown: 1
-  dashInvincibility: 0.5
-  dashCounter: 0
-  canMove: 1
-  availableGuns:
-  - {fileID: 6159625823068005540}
-  currentGun: 0
+  gunArm: {fileID: 6846304496092069867}
+  theRB: {fileID: 6846304495334215258}
 --- !u!58 &6846304495334215259
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -537,8 +537,30 @@ PrefabInstance:
     - target: {fileID: 2823181517626305386, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_Name
-      value: Machine Gun
+      value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: bulletToFire
+      value: 
+      objectReference: {fileID: 2694096419384989725, guid: 30fa25a15f9b1954e9cf792162982e5c,
+        type: 3}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: weaponName
+      value: Uzi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: gunUI
+      value: 
+      objectReference: {fileID: 1547619706621703405, guid: f72804754a2106a4884d758772ef2a02,
+        type: 3}
     - target: {fileID: 7240080027942191755, guid: 2bb150c26b973484c8aa91c5bc466a01,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -594,6 +616,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2766300317315917030, guid: 2bb150c26b973484c8aa91c5bc466a01,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7292374845137529908, guid: 48d85d1ef51430e42b6aef57f02c863d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb150c26b973484c8aa91c5bc466a01, type: 3}
 --- !u!4 &3334246013087768557 stripped
@@ -602,15 +630,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5349275218982395238}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6159625823068005540 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2253790433793833410, guid: 2bb150c26b973484c8aa91c5bc466a01,
-    type: 3}
-  m_PrefabInstance: {fileID: 5349275218982395238}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

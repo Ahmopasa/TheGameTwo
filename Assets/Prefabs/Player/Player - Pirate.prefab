@@ -213,20 +213,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  theRB: {fileID: 1173099955804765930}
-  gunArm: {fileID: 1173099956529041243}
-  anim: {fileID: 1173099955804765929}
-  bodySR: {fileID: 1173099955198909850}
-  dashSpeed: 8
-  dashLength: 0.5
-  dashCooldown: 1
+  moveSpeed: 5.5
+  canMove: 1
+  dashSpeed: 8.5
+  dashLength: 0.45
+  dashCooldown: 0.6
   dashInvincibility: 0.5
   dashCounter: 0
-  canMove: 1
   availableGuns:
-  - {fileID: 481195133762247674}
+  - {fileID: 7944749044075489126, guid: 22cae6ec32fa03d418bef878cabc0723, type: 3}
   currentGun: 0
+  anim: {fileID: 1173099955804765929}
+  bodySR: {fileID: 1173099955198909850}
+  gunArm: {fileID: 1173099956529041243}
+  theRB: {fileID: 1173099955804765930}
 --- !u!58 &1173099955804765931
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -537,8 +537,24 @@ PrefabInstance:
     - target: {fileID: 3960790257847863624, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_Name
-      value: Revolver
+      value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 1053115628602104800, guid: 362423dde9d00e94590a9cc85d03f3b3,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053115628602104800, guid: 362423dde9d00e94590a9cc85d03f3b3,
+        type: 3}
+      propertyPath: weaponName
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053115628602104800, guid: 362423dde9d00e94590a9cc85d03f3b3,
+        type: 3}
+      propertyPath: gunUI
+      value: 
+      objectReference: {fileID: 141494655013890540, guid: f72804754a2106a4884d758772ef2a02,
+        type: 3}
     - target: {fileID: 8476785009903853737, guid: 362423dde9d00e94590a9cc85d03f3b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -594,6 +610,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4015423180119443140, guid: 362423dde9d00e94590a9cc85d03f3b3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2868484836137693883, guid: 48d85d1ef51430e42b6aef57f02c863d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362423dde9d00e94590a9cc85d03f3b3, type: 3}
 --- !u!4 &9048699723746828467 stripped
@@ -602,15 +624,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 590226058359734298}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &481195133762247674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1053115628602104800, guid: 362423dde9d00e94590a9cc85d03f3b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 590226058359734298}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

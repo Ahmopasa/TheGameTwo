@@ -295,20 +295,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b4d5b5a639100429973bcf1e961641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  theRB: {fileID: 865610800035324514}
-  gunArm: {fileID: 865610799512238127}
-  anim: {fileID: 865610800035324517}
-  bodySR: {fileID: 865610799749139622}
-  dashSpeed: 8
+  moveSpeed: 6.5
+  canMove: 1
+  dashSpeed: 5.5
   dashLength: 0.5
-  dashCooldown: 1
+  dashCooldown: 0.75
   dashInvincibility: 0.5
   dashCounter: 0
-  canMove: 1
   availableGuns:
-  - {fileID: 865610800547729348}
+  - {fileID: 5237068964436165975, guid: 9e68fd4e74d042946830c0c0ef97c59e, type: 3}
   currentGun: 0
+  anim: {fileID: 865610800035324517}
+  bodySR: {fileID: 865610799749139622}
+  gunArm: {fileID: 865610799512238127}
+  theRB: {fileID: 865610800035324514}
 --- !u!58 &865610800035324515
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 865610800547729346}
   - component: {fileID: 865610800547729348}
   m_Layer: 8
-  m_Name: Pistol
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +436,7 @@ SpriteRenderer:
   m_SortingLayerID: 59874395
   m_SortingLayer: 6
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4254059877319897387, guid: 48d85d1ef51430e42b6aef57f02c863d,
+  m_Sprite: {fileID: -7292374845137529908, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -460,12 +460,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletToFire: {fileID: 4189913780510908286, guid: aea44e738a6d53d428ed536f7372350f,
+  bulletToFire: {fileID: 2694096419384989725, guid: cf9e6895ad8ac664898e7bec6e14d773,
     type: 3}
   firePoint: {fileID: 865610800861452157}
-  timeBetweenShots: 0.75
-  weaponName: Pistol
-  gunUI: {fileID: 262978286505467586, guid: f72804754a2106a4884d758772ef2a02, type: 3}
+  timeBetweenShots: 0.3
+  shotCounter: 0
+  weaponName: Mini Gun
+  gunUI: {fileID: 1547619706621703405, guid: f72804754a2106a4884d758772ef2a02, type: 3}
   itemCost: 25
   gunShopSprite: {fileID: 6407226241554960098, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
