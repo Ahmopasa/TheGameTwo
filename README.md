@@ -21,7 +21,9 @@
 	  
 # In-game Pictures
 
-<img src="InGamePictures/TheGameTwo_picture_0" width="250"> <img src="InGamePictures/TheGameTwo_picture_1" width="250"> <img src="InGamePictures/TheGameTwo_picture_2" width="250">
+<img src="InGamePictures/TheGameTwo_picture_0" width="250"> 
+<img src="InGamePictures/TheGameTwo_picture_1" width="250"> 
+<img src="InGamePictures/TheGameTwo_picture_2" width="250">
 
 # Installation
 
